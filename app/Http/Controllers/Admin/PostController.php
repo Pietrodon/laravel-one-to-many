@@ -135,8 +135,8 @@ class PostController extends Controller
                 $contatore++;
                 $post_present = Post::where('slug',$slug)->first();
             }
+            $data['slug']=$slug;
         }
-        $data['slug']=$slug;
         $post->update($data);
 
 
